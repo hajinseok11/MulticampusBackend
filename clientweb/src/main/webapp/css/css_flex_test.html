@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<style type="text/css">
+		body{
+			margin:0;
+		}
+	
+	
+	
+		#container{
+			width:500px;
+			height:500px;
+			background-color:aqua;
+			display: flex;
+			
+			justify-content: center;
+			align-content: center;
+		
+		}
+		#container .item{
+			width:100px; 
+	/* 		flex-basis:180px; */
+			flex-grow:1; /* 남은 공간을 어떻게 분배할 것인지 정의 */
+			height: 100px;
+			border: solid 3px blue;
+			background-color: orange;
+		}
+		
+		#container .item:nth-child(3){
+			flex-grow: 1
+		}
+		
+	</style>
+	</head>
+	
+	<body>
+		<div id ="container">
+			<div class="item">test</div>
+			<div class="item">testtesttesttesttesttesttest</div>
+			<div class="item">test</div>
+			<!-- <div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>
+			<div class="item"></div>  -->
+		</div>
+	
+	</body>
+</html>

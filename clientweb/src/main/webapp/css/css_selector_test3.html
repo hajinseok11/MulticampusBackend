@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type = "text/css">
+			/* #subject span:first-child{
+				color:red;
+			}
+			#subject div:last-child{
+				color:blue;
+			} */
+			span{/* inline태그, 글자를 독립적인 요소로 정의하기 위해서 사용
+					width속성을 사용할 수 없다 */
+				width:500px;
+				background-color:yellow;
+			}
+			.myclass *:nth-child(2n)/* 짝수 */ {
+				color:purple;
+			}		
+			.myclass *:nth-child(2n+1)/* 홀수 */ {
+				color:red;
+			}		
+		</style>
+	</head>
+	<body>
+		<div id = "subject" class="myclass">
+			<span>자바</span>
+			<span>JDBC</span>
+			<div>서블릿</div>
+			<p>JSP</p>
+			<h2>스프링</h2>
+			<div>하둡</div>
+			<div>도커</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

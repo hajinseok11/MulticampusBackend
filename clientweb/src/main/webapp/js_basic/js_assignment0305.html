@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			let mynum = prompt("숫자입력");
+			alert(mynum);
+			if (mynum===null){
+				alert("취소버튼을 누르면 작업할 수 없습니다.");
+			}else{
+				if (mynum > 0 && mynum % 2 === 1){
+					document.write("<h1>양수이면서 홀수<h1>");
+				}else if (mynum > 0 && mynum % 2 === 0){
+					document.write("<h1>양수이면서 짝수<h1>");
+				}else{
+					document.write("<h1>음수<h1>");
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

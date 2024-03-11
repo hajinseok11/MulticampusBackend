@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	
+	<body>
+		<script type ="text/javascript">
+            function printGugu(){
+                document.write("<table border='1'>");
+                    let dan =prompt("단입력:");
+                for(i=1;i<=9;i++){
+                    document.write("<tr>");
+                    document.write("<td><h3>"+dan+"*"+i+"="+(dan*i)+"</h3></td>");
+                    document.write("</tr>");
+                     }	
+                document.write("</table>");
+                 }
+
+                function getSum(num1,num2){
+                    let sum = 0;
+                    for(i=num1;i<=num2; i++){
+	                    sum = sum + i;
+                                }
+                        return sum;
+                            }
+
+                 function calc(num1,num2, cal){
+                        if (cal =="+"){
+                            return num1+num2;
+                        } else if(cal =='-'){
+                            return num1-num2;
+                        } else if (cal=='/'){
+                            return num1/num2;
+                        } else{
+                            return num1*num2;
+                        }
+                 }
+                 printGugu();
+                 document.write(getSum( 2,10)+"<br/>");
+                 document.write(calc(2,5,'/'));
+		</script>
+	
+	</body>
+</html>

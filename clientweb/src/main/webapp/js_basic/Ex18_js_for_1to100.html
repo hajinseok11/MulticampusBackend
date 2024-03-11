@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type = "text/javascript">
+		// 1부터 100까지의 합
+		let sum = 0;
+		for (let i = 1 ; i <= 100; i++){
+			sum += i;
+		}
+		document.write("1부터 100까지의 합:"+sum+"<br/>");
+		
+		
+		// 짝수의 합과 홀수의 합
+		let evenTotal = 0;
+		let oddTotal = 0;
+		for (let j = 1 ; j <= 100; j++){
+			if (j % 2 == 0){
+				evenTotal += j;
+			}
+			else{
+				oddTotal +=j;
+			}
+		}
+		document.write("짝수의 합:"+evenTotal+"<br/>");
+		document.write("홀수의 합:"+oddTotal);
+	</script>
+</body>
+</html>

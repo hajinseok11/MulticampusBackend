@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type = "text/css">
+		
+			#head{
+				font-size:20pt;
+				color:blue;
+			}
+		</style>
+		<script type="text/javascript">
+			function changeColor(){
+				// alert("test"); - 한 줄 주석 처리(자바와 동일)
+				// 1. id가 head로 정의된 요소를 찾기
+				headElement = document.querySelector("#head");
+				// 2. id가 head인 요소의 글자색을 red로 변경
+				headElement.style.color= "red";
+			}
+		</script>
+	</head>
+
+	<body>
+		<h1 id="head">자바스크립트</h1>
+		<p id ="text" onclick="changeColor()">텍스트 클릭하기</p>
+	
+	</body>
+</html>

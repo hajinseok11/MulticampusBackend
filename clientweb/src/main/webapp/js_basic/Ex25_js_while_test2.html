@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 홀수의 합
+		let oddNum = 1;
+		let oddSum = 0;
+		while(oddNum <= 100){
+			oddSum += oddNum;
+			oddNum += 2;
+		}
+		document.write("1부터 100까지 홀수의 합:"+ oddSum +"<br/>");
+		// 짝수의 합
+		let evenNum = 0;
+		let evenSum = 0;
+		while(evenNum <= 100){
+			evenSum += evenNum;
+			evenNum += 2;
+		}
+		document.write("1부터 100까지 짝수의 합:"+ evenSum +"<br/>");
+		// 모든 합
+		let num = 1;
+		let sum = 0;
+		while (num <= 100){
+			sum += num;
+			num ++;
+		}
+		document.write("1부터 100까지의 합:"+ sum +"<br/>");
+	</script>
+</body>
+</html>

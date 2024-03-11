@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+
+		function test1(){
+			alert("안내창");
+		}
+		function test2(){
+			myvalue = confirm("삭제하시겠어요?");
+			alert(myvalue);
+			console.log(myvalue);
+		}
+		function test3(){
+			mysubject = prompt("좋아하는 언어는?(사용자에게 입력 받는 대화 상자)");
+			alert(mysubject);
+			console.log(mysubject);
+		}
+		
+		</script>
+		
+	</head>
+<body>
+		<input type="button" value="자바스크립트 함수연결1" onclick="test1()" />
+		<input type="button" value="자바스크립트 함수연결2" onclick="test2()" />
+		<input type="button" value="자바스크립트 함수연결3" onclick="test3()" />
+
+</body>
+</html>

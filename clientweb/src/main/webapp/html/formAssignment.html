@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	
+	<body>
+		<h1>검색할 단어를 입력하세요</h1>
+		<hr color = "grey" size = "2">
+		검색할 단어 : <input type ="text" name ="searchword" size ="30" maxlength ="300">
+		<input type ="submit" value = "검색 시작"><br/>
+		<hr color = "grey" size = "2">
+		
+		<h1>로그인 화면</h1>
+		아이디 : <input type ="text" name ="id" size ="30" maxlength ="300"><br/>
+		패스워드 : <input type ="text" name ="pw" size ="30" maxlength ="300"><br/>
+		<input type ="submit" value = "로그인 처리2">
+		<hr color = "grey" size = "2">
+		
+		<h1>회원가입 화면</h1>
+		가입할<b>id</b> : <input type ="text" name ="signinid" size ="30" maxlength ="300"><br/>
+		가입할<b>pw</b> : <input type ="text" name ="signinpw" size ="30" maxlength ="300"><br/>
+		가입할<b>name</b> : <input type ="text" name ="signinname" size ="30" maxlength ="300" placeholder = "이름 성 순서대로"><br/>
+		<input type="radio" name = "gender" value = "남자" checked = "checked">남자
+		<input type="radio" name = "gender" value = "여자">여자<br/>
+		
+		<input type="checkbox" name="hobby" value="달리기" >달리기
+		<input type="checkbox" name="hobby" value="동영상보기" checked ="checked">동영상보기
+		<input type="checkbox" name="hobby" value="인터넷서핑">인터넷서핑<br/>
+		
+		전화번호 통신사
+		<select name = "phoneAgency">
+		 	<option value="알뜰폰">알뜰폰</option>
+		 	<option value="SKT">SKT</option>
+		 	<option value="KT">KT</option>
+		 	<option value="LG">LG</option>
+	 	</select>
+	 	<input type ="number" name ="phoneNum" size ="100" maxlength ="20" placeholder = "-없이 숫자로 이어서 쓰세요." ><br/>
+		생년월일:<input type = "date"><br/>
+		가입한 시기:<input type = "datetime-local"> 가입한 주 <input type ="week"><br/>
+		
+		하고싶은 말<textarea rows="5" cols="30" name = "info" placeholder = "100글자 이내로 써주세요"></textarea><br/>
+
+	
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>	
+		<script type = "text/javascript">
+            let today = new Date();
+            document.write(today+"<br/>"); 
+            dateStr =  today.getHours()
+                if(dateStr>=12){
+                    document.bgColor = "red";
+                }else{
+                    document.bgColor = "lime";
+                }
+
+
+            let day = today.getDay();
+            document.write(day+"<br/>"); 
+            if(day==1){
+                document.write("<img src= ../images/m_garden01.jpg>");
+            }else if(day==2){
+                document.write("<img src= ../images/m_garden02.jpg>");
+            }else if(day==3){
+                document.write("<img src= ../images/m_garden03.jpg>");
+            }else if(day==4){
+                document.write("<img src= ../images/m_garden04.jpg>");
+            }else if(day==5){
+                document.write("<img src= ../images/m_garden05.jpg>");
+            }else if(day==6){
+                document.write("<img src= ../images/m_garden06.jpg>");
+            }else {
+                document.write("<img src= ../images/m_garden07.jpg>");
+            }
+            // document.write("<img src = '/clientweb/images/m_garden0" + (weekday+1)+" .jpg'>");
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+ <html>
