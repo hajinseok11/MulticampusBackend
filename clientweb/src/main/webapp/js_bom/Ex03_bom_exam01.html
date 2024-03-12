@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-
-<title>Insert title here</title>
-	<script type="text/javascript">
-        function calc(){
-            let mydiv = document.getElementById("count");
-            let result = parseInt(mydiv.value)*12900*0.9;
-            document.getElementById("sumval").innerHTML = result;
-   }
-	</script>
-</head>
-<body>
-    <form>
-   수량: <input type ="text" id ="count" onkeyup = "calc()"> 
-   <span id = "sumval"></span>
-    </form>
+    <head>
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+	    <script type="text/javascript">
+            function calc(){
+                let mydiv = document.getElementById("count");
+                let result = parseInt(mydiv.value)*12900*0.9;
+                document.getElementById("sumval").innerHTML = result;
+            }
+	    </script>
+    </head>
+    <body>
+        <form>
+        수량: <input type ="text" id ="count" onkeyup = "calc()"> 
+        <span id = "sumval"></span>
+        </form>
     </body>
 </html>
