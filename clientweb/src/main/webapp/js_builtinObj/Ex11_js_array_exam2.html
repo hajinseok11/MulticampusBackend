@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>	
+		<script type = "text/javascript">
+            function print(item){
+                document.write(item);
+            }
+
+            let myarr = [5,7,9,10,5];
+            let data = myarr.map(item => item*5);
+            document.write(data);
+            document.write("<br/>");
+
+            let evenMyarr = myarr.map(item => item%2==0);
+            document.write(evenMyarr);
+            
+            evenMyarr.forEach(print);
+            document.write("<hr/>");
+
+        </script>
+
+</head>
+
+<body>
+
+</body>
+<html>
+

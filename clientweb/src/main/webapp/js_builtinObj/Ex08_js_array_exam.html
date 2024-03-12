@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type = "text/javascript">
+            function showArray(arr){
+                for(let i =0; i<arr.length;i++){
+                    document.write("<h3>배열의요소: "+arr[i] + "</h3>");
+                }
+            }
+            let myarr = new Array(9,89,100,100,99);
+            showArray(myarr);
+            // 합
+            let sum = 0;
+            for (let i=0; i < myarr.length; i++){
+                sum = sum + myarr[i];
+            }
+            document.write("<h3>합계: "+sum+"</h3>");
+            document.write("<h3>평균: "+(sum/myarr.length)+"</h3>");
+        </script>
+		
+</body>
+
+</head>
+
+<body>
+    
+</body>
+</html>

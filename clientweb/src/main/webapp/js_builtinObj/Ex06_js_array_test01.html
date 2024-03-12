@@ -4,24 +4,51 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 		<script type = "text/javascript">
+
 			// 숫자를 5개 저장할 수 있는 변수를 정의하고 임의 숫자를 저장
             // 5개 변수에 저장된 모든 숫자의 합을 구하세요,
+
             let num1 = 100;
             let num2 = 200;
             let num3 = 300;
             let num4 = 400;
             let num5 = 500;
             let result = num1+num2+num3+num4+num5;
+
             //alert(result);
             // 배열은 동일한 성격의 데이터들 중 동일한 타입의 데이터를 보관하기 위한 저장소
+            // 자바스크립트의 배열
+            // 5개의 요소를 갖는 배열객체를 생성
+            // 5개의 변수를 선언한 것과 동일한 작업
+            // 배열을 선언하고 생성
+            // 1. 요소의 사이즈를 설정하여 Array객체를 생성해서 사용
+            
             let myarr = new Array(5);
+
+            // 배열의 요소의 값을 초기화
             myarr[0] = 100;
             myarr[1] = 100;
             myarr[2] = 100;
             myarr[3] = 100;
             myarr[4] = 100;
+            // 배열에 저장된 모든 요소를 출력
+            // -index를 이용하면 for문으로 접근이 가능
+            document.write("<h3>배열의 요소의 갯수:"+myarr.length+"</h3>");
             for (let i = 0; i < 5; i++){
                 document.write(myarr[0]+"<br/>");
+            }
+
+            //2. 배열의 사이즈를 지정하지 않고 - 실행중에 추가 가능
+            let myarr2 = new Array();
+            document.write("<h3>배열의 요소의 갯수:"+myarr2.length+"</h3>");
+            myarr2[0] = "java";
+            myarr2[1] = "oracle";
+            myarr2[2] = "JDBC";
+            myarr2[3] = "servlet";
+            document.write("<h3>배열의 요소의 갯수:"+myarr2.length+"</h3>");
+
+            for (let i =0; i<myarr2.length;i++){
+                document.write("<h3>배열의 요소:"+myarr2[i]+"</h3>");
             }
 		</script>
 		
