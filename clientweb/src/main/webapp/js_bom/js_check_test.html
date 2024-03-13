@@ -4,22 +4,75 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript">
+	//모두체크해제 라는 체크박스를 클릭하면 food라는 이름으로 정의된 모든 체크박스가 선택이 되고
+	// 선택된 상태에서 클릭하면 모두 해제될 수 있도록 작업
+	function allcheck(){
+		// alert("함수실행");
+		// 1. allchk의 상태값을 가져오기
+		let allchk = document.getElementById("allchk");
+		let allchkVal = allchk.checked;
+		// alert(allchkVal);
+		// 2. class속성이 myfood인 객체를 모두 가져오기
+		// - 여러개가 리턴되는 메소드의 값은 배열로 관리
+		let checkfood = document.getElementsByClassName("myfood");
+		console.log(checkfood);
+		// 배열이므로 요소의 갯수를 확인할 수 있다.
+		console.log(checkfood.length);
+
+		// 3. allcheck의 checked값을 2번에서 가져온 체크박스에 설정
+		for (let i=0; i<checkfood.length; i++){
+			checkfood[i].checked = allchkVal;
+		}
+	}
+	function newallcheck(){
+		alert("new");
+		let allchk2 = document.querySelector("#allchk");
+		let foodArr = document.querySelectorAll(".myfood");
+		for (let checkbox of foodArr){
+			checkbox.checked = allchk2.checked;
+
+		}
+	}
+	function ckFunc(){
+		let foddArr = document.querySelectorAll(".myfood");
+		let checkStr = ""; // 체크된 체크박스의 문자열을 저장하기 위한 변수
+		for (let checkbox of foodArr){
+			//체크박스의 checked속성이 true이면 변수에 저장하기
+			if(checkbox.checked){
+				checkStr = checkStr + checkbox.value + " ";
+			}
+		}
+		document.getElementById("result").innerHTML = checkStr;
+	}
+	function ckFunc2(){
+		//alert("ckFunc2");
+		let foodArr = document.querySelectorAll("input[name='food']");
+		let checkStr ="";
+		// foodArr의 forEach를 이용해서 작업해보기
+		foodArr.forEach(function(foodItem){
+			if (foodItem.checked){
+				checkStr = checkStr + foodItem.value + " ";
+			}
+		})
+		document.getElementById("result").innerHTML = checkStr;
+	}
 </script>
 </head>
 <body>
+	<!-- 체크박스는 배열로 관리 -->
 		<form name="cbfmt">
 			<label>아이스크림</label> 
-			<input type="checkbox" name="food"
-			 value="아이스크림" id="ice"> 
-				<label>커피</label> <input type="checkbox"	
+			<input type="checkbox" name="food" class = "myfood"
+			 	value="아이스크림" id="ice"> 
+				<label>커피</label> <input type="checkbox" class = "myfood"	
 				name="food" value="커피" id="coffee">
-				 <label>음료수</label> <input type="checkbox" 
-				 name="food" value="음료수" id="beverage"> 
+				<label>음료수</label> <input type="checkbox" class = "myfood"
+				name="food" value="음료수" id="beverage"> 
 				<label>모두체크/해제</label>
 			<input type="checkbox" name="allchk" 
-			id="allchk" onclick="allckeck()"><br>
+			id="allchk" onclick="newallcheck()"><br>
 
-			<input type="button" value="전송" onclick="ckFunc()">
+			<input type="button" value="전송" onclick="ckFunc2()">
 		</form>
 		<div id="result"></div>
 </body>

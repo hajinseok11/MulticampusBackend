@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function idcheck() {
+				var idvalue =  document.querySelector("#id").value;
+				var result =  document.querySelector("#result");
+				var str = "";
+				if(idvalue.length<4){
+					str="4글자 이상의 글자를 입력하세요";
+				}else{
+					//기존의 존재하는 아이디인지 평가(db연동)
+					if(idvalue=="java"){
+						str = "이미 사용중인 아이디입니다.";
+					}else{
+						str = "사용 가능한 아이디입니다.";
+					}
+				}
+				result.innerHTML = str;
+			}
+		</script>
+	</head>
+	<body>
+		<h1>티몬회원가입</h1>
+		<h2>필수항목</h2>
+		<form>
+			아이디:<input type="text" id="id" onkeyup="idcheck()"/>
+			<div id="result" style="color: red;font-weight: bold;"></div>
+		</form>
+	</body>
+</html>

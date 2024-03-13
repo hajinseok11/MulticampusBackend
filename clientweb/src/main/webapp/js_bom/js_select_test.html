@@ -4,11 +4,20 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 	<script type="text/javascript">
+		function selectTest(){
+			let selectItem = document.querySelector("#myselect");
+			let index = selectItem.selectedIndex;
+			alert(index);
+			alert(selectItem.value);
+			alert(selectItem.options[index].text);
+			alert(selectItem.options[index].value);
+		}
+
 	</script>
 </head>
 <body>
 	<form name="selfmt">
-		<select name="tel" onchange="selectTest()">
+		<select name="tel" id = "myselect" onchange="selectTest()">
 			<option value="default">핸드폰식별번호</option>
 			<option value="공일공">010</option>
 			<option value="011">011</option>

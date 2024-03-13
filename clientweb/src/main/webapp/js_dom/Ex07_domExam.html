@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type = "text/javascript">
+		function insertP(){
+			let pNode = document.createElement("p");
+			pNode.setAttribute("style","background-color:yellow");
+			let textNode = document.createTextNode("new P");
+
+			let parentNode = document.getElementById("root");
+
+			// 노드 추가하기
+			// 1) 텍스트 노드 -> p노드에 append
+			// 2) p노드를 -> root에 append
+			pNode.appendChild(textNode);
+			parentNode.appendChild(pNode);
+		}
+		function deleteP(){
+			// 삭제할 부모노드 구하기
+			let parentNode = document.getElementById("root");
+			parentNode.removeChild(parentNode.lastElementChild);
+		}
+		function deleteDivAndP(){
+			// 1. 삭제할 노드의 부모노드 구하기
+			let parentNode = document.getElementById("root");
+			// 2. 삭제할 모든 노드를 구하기
+			while(parentNode.hasChildNodes){
+				// alert("있어");
+				parentNode.removeChild(parentNode.lastChild);
+			}
+		}
+			
+		
+	</script>
+
+	<div id="layer"></div>
+
+	<hr>
+
+	<div id="root">
+		<p style="background: gray;">line01</p>
+		<p style="background: skyblue">line02</p>
+		<p style="background: green;">line03</p>
+		<p style="background: red;">line04</p>
+	</div>
+
+	<hr>
+	<button onclick="insertP()">P태그추가하기</button>
+	<button onclick="deleteP()">P태그삭제하기</button>
+	<button onclick="deleteDivAndP()">div안의 모든 p태그 삭제하기</button>
+	<button onclick="innerHTML_test()">innerHTML</button>
+
+
+</body>
+</html>
