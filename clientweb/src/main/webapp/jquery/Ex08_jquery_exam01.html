@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<title>jquery</title> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+		<link rel = "stylesheet" href = "../common/css/my_style2.css">
+		<script type="text/javascript">
+		 $(function(){
+			//이벤트가 발생되면 이벤트 핸들러가 호출되면서 발생된 이벤트 객체가 만들어져서 자바스크립트 엔진에 의해
+			//이벤트 핸들러에 전달 
+			$(" .gardenimg").on("mouseover",function(event){
+				// console.log(event);
+				// console.log($(this)); // 이벤트가 연결된 jQuery객체
+				// console.log(event.target); // 실제 이벤트가 발생된 엘리먼트
+				$(".gardenimg p").remove();
+				let count = Math.floor(Math.random()*10 )+ 500;
+				let data = $("<p>방문자수:"+count+"</p>");
+				$(this).append(data);
+			})
+		});
+		</script>
+	</head> 
+	<body>
+		<div id="header">
+			<h2>아침고요수목원~</h2>
+		</div>
+		<div id="main">
+			<div class="gardenimg"><img src="../images/m_garden01.jpg" /></div>
+			<div class="gardenimg"><img src="../images/m_garden02.jpg"/></div>
+			<div class="gardenimg"><img src="../images/m_garden03.jpg"/></div>
+			<div class="gardenimg"><img src="../images/m_garden05.jpg"/></div>
+		</div>
+		
+		<script>
+		
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+ 

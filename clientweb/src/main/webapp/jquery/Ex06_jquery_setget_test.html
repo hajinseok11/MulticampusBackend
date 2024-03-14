@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type = "text/javascript">
+	$(document).ready(function(){
+		$("result").text("<h1>태그가 인식되지 않는다.<h1>"); // ----text("문자열")는 settter로 활용
+		$("#data1").on("keyup",function(){
+			//data1에 입력한 값을 읽어서 result에 출력
+			let myval = parseInt($("#data1").val())+1000; // ----val() 가 getter
+			$("#result2").text(myval); // text가 setter로 활용
+		});
+		$("#btn").on("click",function(){
+			let textval = $("result2").text(); // ---text()가 getter로 활용
+			$("#data1").val(textval); // --val()가 setter로 활용
+		})
+	});
+
+</script>
+</head>
+<body>
+	<p id="test">jQuery값 설정하기</p>
+	<p>양식태그에서 발생하는 값, 문서의 값</p>
+	<div id="result"></div>
+	<div id="result2"></div>
+	<form>
+		<input type="number" id="data1">
+		<input type="number" id="data2">
+		<input type="button" id="btn" value="값가져오기">
+	</form>
+</body>
+</html>
