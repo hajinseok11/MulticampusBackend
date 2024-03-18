@@ -26,6 +26,7 @@ public class Ex07_ScannerTest2 {
         System.out.print("정수입력: ");
         double intVal =scan.nextInt();
         System.out.println("읽은값: " + intVal);
+        scan.close();
 
 
     }

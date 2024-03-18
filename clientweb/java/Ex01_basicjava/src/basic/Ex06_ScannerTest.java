@@ -20,5 +20,6 @@ public class Ex06_ScannerTest {
         }else{
             System.out.println("입력한 숫자"+inputNum+"은 홀수입니다");
         }
+        scan.close();
     }
 }
