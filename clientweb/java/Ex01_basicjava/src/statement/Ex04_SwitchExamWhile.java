@@ -28,6 +28,7 @@ public class Ex04_SwitchExamWhile {
         System.out.print("숫자를 입력하세요");
         int num1 = scan.nextInt();
         int num2 = scan.nextInt();
+        
         switch (calculate) {
             case 1:
                 System.out.println(num1+num2);
@@ -46,6 +47,7 @@ public class Ex04_SwitchExamWhile {
                 System.out.println(num1/num2);
                 break;
             }
+        scan.close();
         }
     }
 }

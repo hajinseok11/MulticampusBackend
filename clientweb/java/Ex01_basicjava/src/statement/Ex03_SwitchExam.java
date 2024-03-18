@@ -34,6 +34,7 @@ public class Ex03_SwitchExam {
                 System.out.println(num1/num2);
                 break;
         }
+        scan.close();
     }
         
 }

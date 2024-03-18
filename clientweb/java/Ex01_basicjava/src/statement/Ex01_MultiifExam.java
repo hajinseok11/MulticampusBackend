@@ -22,6 +22,7 @@ public class Ex01_MultiifExam {
         }else{
             System.out.println("잘못입력");
         }
+        scan.close();
 
     }
 }
