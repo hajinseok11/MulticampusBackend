@@ -28,6 +28,7 @@ public class Ex01_ArrayTest {
         // 실수 = 0.0
         // boolean = false
         // 참조형 배열 = null
+        
         System.out.println("배열의 0번 요소의 값 => " + myarr[0]);
         boolean [] boolArray = new boolean[2];
         System.out.println("배열의 0번 요소의 값 => " + boolArray[0]);
@@ -35,7 +36,5 @@ public class Ex01_ArrayTest {
         System.out.println("배열의 0번요소의 값 => " + doubleArray[0]);
         Random[] randomArray = new Random[2];
         System.out.println("배열의 0번요소의 값 => " + randomArray[0]);
-
-
     }
 }
