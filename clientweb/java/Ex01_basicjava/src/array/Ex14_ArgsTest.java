@@ -19,5 +19,8 @@ public class Ex14_ArgsTest {
         // Integer in = new Integer();
         // in.paresInt() // 일반적인 클래스의 메소드를 사용하는 방법이나
         // static이 추가된 메소드는 클래스명.메소드명()
+
+        
+
     }
 }

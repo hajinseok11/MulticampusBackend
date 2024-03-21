@@ -4,7 +4,11 @@ import oopbasic.Person;
 
 public class Ex01_ConstructorTest {
     public static void main(String[] args) {
-        //
+        Constructor obj4 = new Constructor("석진","jin","1234","서울","010","901111",
+        "곰돌이",10000);
+        System.out.println(obj4.getName() + "," + obj4.getAddr()+","+obj4.getId()+","+obj4.getPass()+obj4.getNickName()+obj4.getPoint());
+        System.out.println("---------------------------------------------------------------");
+        
         Person p = new Person();
         Constructor obj = new Constructor();
         System.out.println(obj);

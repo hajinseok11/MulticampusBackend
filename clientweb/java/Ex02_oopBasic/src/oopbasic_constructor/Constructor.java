@@ -5,6 +5,11 @@ public class Constructor {
     private String id;
     private String pass;
     private String addr;
+    private String telNum;
+    private String ssn;
+    private String nickName;
+    private int point;
+
     public Constructor(){
         // 생성자 내부에서 객체가 생성될 때 실행될 코드를 정의
         System.out.println("Constructor 기본생성자");
@@ -15,8 +20,26 @@ public class Constructor {
         this.id = id;
         this.pass = pass;
         this.addr = addr;
-    }
+        System.out.println("매개변수 4개 생성자");
 
+    }
+    // insert용
+    public Constructor(String name, String id, String pass, String addr, String telNum, String ssn, String nickName) {
+        this(name, id, pass, addr);
+        this.telNum = telNum;
+        this.ssn = ssn;
+        this.nickName = nickName;
+        System.out.println("매개변수 7개 생성자");
+    }
+    // select용
+    public Constructor(String name, String id, String pass, String addr, String telNum, String ssn, String nickName, int point) {
+        // 생성자 메소드의 호출은 한 가지 종류만 호출
+        // this()가 있으면 super()없어야 한다.
+        this(name, id, pass, addr, telNum, ssn, nickName);
+        this.point = point;
+        System.out.println("매개변수 8개 생성자");
+
+    }
     public String getName() {
         return this.name;
     }
@@ -48,5 +71,38 @@ public class Constructor {
     public void setAddr(String addr) {
         this.addr = addr;
     }
+
+    public String getTelNum() {
+        return this.telNum;
+    }
+
+    public void setTelNum(String telNum) {
+        this.telNum = telNum;
+    }
+
+    public String getSsn() {
+        return this.ssn;
+    }
+
+    public void setSsn(String ssn) {
+        this.ssn = ssn;
+    }
+
+    public String getNickName() {
+        return this.nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
+
+    public int getPoint() {
+        return this.point;
+    }
+
+    public void setPoint(int point) {
+        this.point = point;
+    }
+    
 
 }

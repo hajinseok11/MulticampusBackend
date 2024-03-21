@@ -1,6 +1,6 @@
 package oopbasic;
 
-public class Ex13_AccTest {
+public class Ex12_AccTest {
     public static void main(String[] args) throws Exception {
         String accNo = null;
         int balance = 0;
