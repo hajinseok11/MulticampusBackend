@@ -10,9 +10,8 @@ public class Teacher extends Person {
         this.subject = subject;
     }
     public void display(){
-        System.out.print("이름: "+ getName());
-        System.out.print("나이: "+ getAge());
-        System.out.println("담당과목: "+ subject);
+        super.display();
+        System.out.println(" 담당과목: "+ subject);
     }
     public Teacher(){
     }

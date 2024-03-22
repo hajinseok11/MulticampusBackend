@@ -22,5 +22,8 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
+    public void display(){
+        System.out.print("이름 : "+getName()+" 나이: "+getAge());
+    }
 
 }

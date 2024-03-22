@@ -16,9 +16,8 @@ public class Staff extends Person {
         this.dept = dept;
     }
     public void display(){
-        System.out.print("이름: "+ getName());
-        System.out.print("나이: "+ getAge());
-        System.out.println("부서: "+ dept);
+        super.display();
+        System.out.println(" 부서: "+ dept);
     }
     
 }

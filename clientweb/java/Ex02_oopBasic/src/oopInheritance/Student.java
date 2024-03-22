@@ -10,9 +10,8 @@ public class Student extends Person {
         this.id = id;
     }
     public void display(){
-        System.out.print("이름: "+ getName());
-        System.out.print("나이: "+ getAge());
-        System.out.println("학번: "+ id);
+        super.display();
+        System.out.println(" 학번: "+ id);
     }
     public Student(){
     }
