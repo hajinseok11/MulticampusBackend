@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Ex02_RefTypeCastingTest {
     public static void main(String[] args) {
-        // 상속관꼐에 있는 클래스는 자동캐스팅
+        // 상속관계에 있는 클래스는 자동캐스팅
         // 서브클래스의 인스턴스를 슈퍼클래스 타입으로 변환하는 작업 - 업케스팅(안전)
         // 상위클래스타입 변수 = new 하위클래스()
         ArrayList<String> list = new ArrayList<>();
