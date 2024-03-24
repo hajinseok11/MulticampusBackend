@@ -23,7 +23,7 @@ public class Person {
         this.age = age;
     }
     public void display(){
-        System.out.print("이름 : "+getName()+" 나이: "+getAge());
+        System.out.print("이름 : "+getName()+"   나이: "+getAge());
     }
 
 }
