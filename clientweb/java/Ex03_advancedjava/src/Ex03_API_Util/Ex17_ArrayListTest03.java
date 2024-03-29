@@ -14,14 +14,24 @@ public class Ex17_ArrayListTest03 {
          */
         // 저장 - 모든 데이터가 담길 ArrayList
         ArrayList<ArrayList<String>> lists = new ArrayList<>();
-        ArrayList<String> list = new ArrayList<>();
+        
         for(int row = 1; row<=5; row++){
+            ArrayList<String> list = new ArrayList<>();
             for(int i = 1; i<=5; i++){
                 list.add("*");
             }
             lists.add(list);
         }
         System.out.println(lists);
+
+        for(ArrayList<String> list: lists){
+            for(String data: list){
+                System.out.print(data+"\t");
+            }
+            System.out.println();
+
+        }
+
         //1. 코드 분석하기
         //2. ArrayList<ArrayList<String>> lists = new ArrayList<>(); 선언된 위치에 따라 결과 다른 이유
         //3. 알맞게 출력하기
