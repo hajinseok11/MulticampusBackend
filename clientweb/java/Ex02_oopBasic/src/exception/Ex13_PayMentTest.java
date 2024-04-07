@@ -1,6 +1,6 @@
 package exception;
 
-public class PayMentTest {
+public class Ex13_PayMentTest {
 
 	// main() : 수정하지 마세요.
 	public static void main(String[] args) throws PayException {

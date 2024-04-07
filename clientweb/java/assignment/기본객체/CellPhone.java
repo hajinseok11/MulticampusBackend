@@ -8,26 +8,28 @@ public class CellPhone {
     }
     public CellPhone(String model) {
         this.model = model;
+        
     }
     public void call(int time){
         if (time > 0){
             System.out.println("통화시간: "+time);
             battery = battery - (time*0.5);
+            if (battery < 0 ){
+                battery = 0;
+            }
         }else {
             System.out.println("통화시간입력오류");
             return;
         }
     }
-    public void charge(int time){
-        if (time < 0){
+    public void charge(int chargeTime){
+        if (chargeTime < 0){
             System.out.println("충전시간입력오류");
         }
-        System.out.printf("충전시간 %s\n",time);
-        if (battery > 0 & battery < 101){
-            battery = battery + time*3;
-            if (battery==100){
-                return;
-            }
+        System.out.printf("충전시간 %s\n",chargeTime);
+        battery = battery+(chargeTime*3);
+        if (battery > 100){
+            battery =100;
         }
     }
     public void printBattery(){
