@@ -78,6 +78,39 @@ JVM이 인식할 수 있는 위치로 오라클 드라이버 연결
    	  Statement stmt = con.createStatement()
    	  => 어떤 DBMS를 사용하냐에 따라 다른 Statement객체가 만들어짐
    	  
+   2) PreparedStatement객체를 이용
+   	  - Connection객체가 갖고있는 prepareStatement 메소드를 이용해서 생성
+   	  - 캐시사용
+   	  [sql 실행]
+   	  	① 쿼리문장을 분석
+   	  	② 컴파일
+   	  	③ 실행
+
+		Statement는 SQL을 실행하는 과정에서 매번 3단계의 내용을 처리하고 있지만 PreparedStatement는 한 번만 작업하고 캐시에서 꺼내서 사용
+		
+		- PreparedStatement 객체가 sql문을 실행하는 방식은 SQL문을 미리 파싱해놓고 외부에서 입력받아야하는 값들은 
+		실행할 때 전달받아 sql문이 실행될 수 있도록 처리
+		① sql문을 미리 파싱할 수 있도록 외부에서 입력 받아서 처리해야 하는 부분만 ?로 대체해서 sql문을 정의
+			String sql = "select * from member where id = ? and pass = ?"
+			=> ? 에는 필드가 올 수 없고 무조건 값만 연결될 수 있다. (컬럼명은 ?로 처리 못함)
+			=> 순수한 값만 올 수 있고 기호는 ?에 사용할 수 없다.('?'는 인식 못함	  
+   	  
+   	    ② PreparedStatement객체를 생성할 때 sql문을 매개변수로 넘긴다.
+   	      => Connection의 prepareStatement메소드를 호출할 때 sql을 넘겨 sql문을 미리 파싱해 놓도록 작업한다.
+   	      PreparedStatement ptmt = con.prepareStatement(sql)
+   	      
+   	    ③ ?에 대한 값을 세팅
+   	      => ? 는 외부에서 입력받는 값을 셋팅해야 하므로 메소드를 이용해서 설정
+   	      => ? 를 셋팅해야 하므로 setXX 메소드가 많다.
+   	      => setXXX의 메소드와 오라클 타입은 ResultSet과 동일
+   	      ptmt.setXXX(1,"jang") => 첫 번째 ?에 "jang"을 대입하기
+   	      			----  
+   	      		   ?의 순서
+   	      		   
+   	  
+   	  
+   	  
+   	  
 4. SQL실행
    1) Statement객체 사용
       ① executeUpdate : insert, update, delete명령문을 실행
@@ -91,7 +124,15 @@ JVM이 인식할 수 있는 위치로 오라클 드라이버 연결
       ② executeQuery  : select명령문을 실행
                         실행한 후 조회된 테이블을 리턴, DBMS에서 조회된 테이블을 자바에서 사용할 수 있도록 만들어 놓은 객체가 ResultSet
                         어떤 DBMS를 쓰냐에 따라 다른 하위객체가 리턴  
-      
+                        
+   2) PreparedStatement 객체를 사용
+      - sql문을 미리 PreparedStatement객체를 만들면서 전달했으므로 메소드를 호출할 때는 sql문을 전달하지 않는다.
+   	  ① executeUpdate : insert, update, delete명령문을 실행
+   	  
+   	  	int result = ptmt.executeUpdate()
+   	  ② executeQuery  : select명령문을 실행
+   	  	ResultSet rs = ptmt.exectueQuery()
+   
 5. 결과처리
    1) insert,delete,update
       - 모두 int를 리턴하므로 동일한 방법으로 처리  
@@ -162,7 +203,25 @@ JVM이 인식할 수 있는 위치로 오라클 드라이버 연결
       패스워드:_______   	  
    	  
    	  
+   	  
+   	  
+   	  드라이버 로딩
+   	  연결 
+   	  Statement 객체생성
+   	  SQL실행
+   	  결과처리
+   	  자원반납
    	   	   		
+[DAO 패턴을 적용해서 구현하기]
+	- Data Access Object
+	- 비지니스 로직과 DB연동 코드를 분리 
+	- 하나의 테이블을 엑세스하는 기능을 하나의 클래스로 구현하기
+	  테이블명 + DAO
+	  ex) MemberDAOImpl
+	- DAO를 위한 인터페이스를 정의하고 작업하기(MemberDAO)	   		
+ 	   		
+ 	   		
+ 	   		
  	   		
  	   		
  	   		

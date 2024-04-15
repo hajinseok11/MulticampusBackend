@@ -15,6 +15,7 @@ public class Ex06_EmpSearchTest {
 		System.out.print("이름 철자: ");
 		letter = key.nextLine();
 		obj.search(letter);
+		key.close();
 	}
 	
 	public void search(String letter) {

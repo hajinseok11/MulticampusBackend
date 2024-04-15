@@ -7,8 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-import Ex01_JDBC.Ex11_PreparedSelectTest;
-
 public class Ex05_EmpReadTest {
 
 	public static void main(String[] args) {
@@ -20,7 +18,6 @@ public class Ex05_EmpReadTest {
 		selectId = key.nextInt();
 		key.close();
 		obj.select(selectId);
-		
 	}
 	public void select(int selectId) {
 		String url = "jdbc:oracle:thin:@49.142.60.208:1521:xe";
